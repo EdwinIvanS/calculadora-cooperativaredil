@@ -12,7 +12,7 @@
         <form class="addFomulario">
           <div>
             <label>Lìnea de crèdito:</label>
-            <select required>
+            <select id="producto" name="producto" required>
               <% for (i = 0; i < linea.length; i++){%>
               <option value="<%= linea[i].id %>"><%= linea[i].value%></option>
               <% } %>
@@ -26,7 +26,7 @@
 
           <div>
             <label>Plazo (Meses):</label>
-            <select required>
+            <select id="tiempo" name="tiempo" required>
               <% for (i = 1; i <=10; i++){%>
               <option value="<%= i %>"><%= i%></option>
               <% } %>
@@ -39,6 +39,7 @@
             <h3>Valor cuota aproximado:</h3>
             <P>VALUE</P>
           </div>
+
           <div class="btn">
             <button type="button">Calcular</button>
           </div>

@@ -13,8 +13,12 @@
   --Gray: hsl(0, 20%, 94%);
   --Very-Light-Gray: #fafafaf5;
 
+  --border-black: #000000bf;
   --border-gray: rgba(163, 163, 163, 0.4);
   --Blue: #0075ff;
+
+  --Blue-btn : #0C65A7;
+  --Blue-dark: #07487a;
 
   --font: "Roboto", sans-serif;
   --font-body: "Montserrat", sans-serif;
@@ -45,8 +49,8 @@ body {
 }
 
 .addFomulario {
-  -webkit-box-shadow: 0px 0px 18px -10px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 18px -10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 18px -10px var(--border-black);
+  box-shadow: 0px 0px 18px -10px var(--border-black);
   padding: 15px 60px 30px;
 }
 
@@ -110,13 +114,13 @@ button{
     text-transform: none;
     border-radius: 0.3em;
     padding: 0.8em 1.8em;
-    background: #0C65A7;
+    background: var(--Blue-btn);
     border-color: transparent;
     color: #ffffff !important;
     box-shadow: 0 0em 0em rgb(0 0 0 / 20%);
 }
 
 button:hover{
-  background: #07487a;
+  background: var(--Blue-dark);
   cursor: pointer;
 }
