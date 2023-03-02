@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
     <section>
@@ -13,20 +12,26 @@
         <form class="addFomulario">
           <label>Lìnea de crèdito:</label>
           <select required>
-            
+            <% for (i = 1; i < linea.length; i++){%>
+              <option value="<%= linea[i].id %>"><%= linea[i].value%></option>
+            <% } %>
           </select>
           <label>Monto:</label>
-          <input type="text">
+          <input type="text" />
           <label>Plazo (Meses):</label>
-          <input type="text">
+          <select required>
+            <% for (i = 1; i <=10; i++){%>
+              <option value="<%= i %>"><%= i%></option>
+            <% } %>
+          </select>
           <div class="containerInfo">
-                <h3>Tasa MV:</h3>
-                <P>VALUE</P>
-                <h3>Valor cuota aproximado:</h3>
-                <P>VALUE</P>             
+            <h3>Tasa MV:</h3>
+            <P>VALUE</P>
+            <h3>Valor cuota aproximado:</h3>
+            <P>VALUE</P>
           </div>
           <div class="btn">
-            <button type="button"> Calcular </button>
+            <button type="button">Calcular</button>
           </div>
         </form>
       </div>

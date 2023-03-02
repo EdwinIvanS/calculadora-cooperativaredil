@@ -1,6 +1,8 @@
+const linea = require("../public/utils/lineaCredito");
+
 const mainController = {
     index : (req, res) => {
-        res.render('index', { title: 'Express' });
+        return res.render("index", { linea : linea });
     }
 }
 
