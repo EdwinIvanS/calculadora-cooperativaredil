@@ -10,20 +10,29 @@
           <h1>Calcula tu Crédito</h1>
         </div>
         <form class="addFomulario">
-          <label>Lìnea de crèdito:</label>
-          <select required>
-            <% for (i = 0; i < linea.length; i++){%>
+          <div>
+            <label>Lìnea de crèdito:</label>
+            <select required>
+              <% for (i = 0; i < linea.length; i++){%>
               <option value="<%= linea[i].id %>"><%= linea[i].value%></option>
-            <% } %>
-          </select>
-          <label>Monto:</label>
-          <input type="text" />
-          <label>Plazo (Meses):</label>
-          <select required>
-            <% for (i = 1; i <=10; i++){%>
+              <% } %>
+            </select>
+          </div>
+
+          <div>
+            <label>Monto:</label>
+            <input type="text" />
+          </div>
+
+          <div>
+            <label>Plazo (Meses):</label>
+            <select required>
+              <% for (i = 1; i <=10; i++){%>
               <option value="<%= i %>"><%= i%></option>
-            <% } %>
-          </select>
+              <% } %>
+            </select>
+          </div>
+
           <div class="containerInfo">
             <h3>Tasa MV:</h3>
             <P>VALUE</P>
