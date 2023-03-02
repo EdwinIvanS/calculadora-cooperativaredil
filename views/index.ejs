@@ -12,7 +12,7 @@
         <form class="addFomulario">
           <label>Lìnea de crèdito:</label>
           <select required>
-            <% for (i = 1; i < linea.length; i++){%>
+            <% for (i = 0; i < linea.length; i++){%>
               <option value="<%= linea[i].id %>"><%= linea[i].value%></option>
             <% } %>
           </select>
