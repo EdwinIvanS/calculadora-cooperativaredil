@@ -12,8 +12,9 @@
         <form class="addFomulario">
           
           <div>
-            <label for="linea">Lìnea de crèdito:</label>
+            <label for="linea">Lìnea de crédito:</label>
             <select id="linea" name="linea" required>
+              <% let lineaSeleccionada =""; %>
               <% for (i = 0; i < linea.length; i++){%>
               <option value="<%= linea[i].id %>"><%= linea[i].value%></option>
               <% } %>
@@ -22,7 +23,7 @@
 
           <div id="visible" class="oculto">
             <label for="monto">Monto:</label>
-            <input type="text" id="monto" />
+            <input type="number" id="monto" />
           </div>
 
           <div class="oculto" id="plazo">
@@ -34,14 +35,13 @@
             </select>
           </div>
 
-          <div class="calculo">
-            
+          <div class="calculo">            
             <h3>Tasa MV:</h3>
             <P>VALUE</P>
             <h3>Valor cuota aproximado:</h3>
             <P>VALUE</P>
           </div>
-
+          <h2 id="h2">probando</h2>
           <div>
             <button id="btn" type="button">Calcular</button>
           </div>

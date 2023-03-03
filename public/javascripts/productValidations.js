@@ -5,20 +5,31 @@ window.addEventListener("load", function () {
   let btn = document.querySelector("#btn");
 
   selectProduct.onchange = (e) => {
+    
     if (e.target.value != "vacio" || e.target.value != "") {
       document.querySelector(".oculto").style.display = "block";
+      document.querySelector(".oculto").focus();  
+      //document.querySelector("#h2").innerHTML = "bloque if " + e.target.value;    
     }
+
+    if (e.target.value == "vacio" || e.target.value == "") {
+      document.querySelector(".oculto").style.display = "none";
+    }
+      
+    
   };
 
   monto.onchange = (e) => {
     if (e.target.value != ".oculto") {
       document.querySelector("#plazo").style.display = "block";
+      document.querySelector("#plazo").focus();
     }
   };
 
   plazo.onchange = (e) => {
     if (e.target.value != ".oculto") {
       document.querySelector("#btn").style.display = "table-row-group";
+      document.querySelector("#btn").focus();
     }
   };
 
