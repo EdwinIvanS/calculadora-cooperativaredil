@@ -10,41 +10,44 @@
           <h1>Calcula tu Crédito</h1>
         </div>
         <form class="addFomulario">
+          
           <div>
-            <label>Lìnea de crèdito:</label>
-            <select id="producto" name="producto" required>
+            <label for="linea">Lìnea de crèdito:</label>
+            <select id="linea" name="linea" required>
               <% for (i = 0; i < linea.length; i++){%>
               <option value="<%= linea[i].id %>"><%= linea[i].value%></option>
               <% } %>
             </select>
           </div>
 
-          <div>
-            <label>Monto:</label>
-            <input type="text" />
+          <div id="visible" class="oculto">
+            <label for="monto">Monto:</label>
+            <input type="text" id="monto" />
           </div>
 
-          <div>
-            <label>Plazo (Meses):</label>
-            <select id="tiempo" name="tiempo" required>
+          <div class="oculto" id="plazo">
+            <label for="plazo">Plazo (Meses):</label>
+            <select id="plazo" name="plazo" required>
               <% for (i = 1; i <=10; i++){%>
               <option value="<%= i %>"><%= i%></option>
               <% } %>
             </select>
           </div>
 
-          <div class="containerInfo">
+          <div class="calculo">
+            
             <h3>Tasa MV:</h3>
             <P>VALUE</P>
             <h3>Valor cuota aproximado:</h3>
             <P>VALUE</P>
           </div>
 
-          <div class="btn">
-            <button type="button">Calcular</button>
+          <div>
+            <button id="btn" type="button">Calcular</button>
           </div>
         </form>
       </div>
     </section>
+    <script src="/javascripts/productValidations.js"></script>
   </body>
 </html>
