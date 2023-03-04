@@ -9,33 +9,50 @@
         <div class="containerAddTitle">
           <h1>Calcula tu Crédito</h1>
         </div>
-        <form class="addFomulario">
-          
+        <form class="addFomulario" id="formul">
           <div>
             <label for="linea">Lìnea de crédito:</label>
-            <select id="linea" name="linea" required>
-              <% let lineaSeleccionada =""; %>
+            <select id="linea" name="linea" ">                          
               <% for (i = 0; i < linea.length; i++){%>
-              <option value="<%= linea[i].id %>"><%= linea[i].value%></option>
-              <% } %>
+                 <option value="<%= linea[i].id %>"><%= linea[i].value%></option>                  
+              <% } %>              
+            </select>
+          </div>
+
+          <div>
+            <label for="prueba">Lìnea de crédito:</label>
+            <select id="prueba" name="miprueba" ">                          
+              <% for (i = 0; i < linea.length; i++){%>
+                <%= console.log("PRIMER NIVEL == " + linea[i].plazo.length);%> 
+                 <%= console.log("formul == " );%> 
+                  <% for (j = 0; j < linea[i].plazo.length; j++){%>
+                    <option value="<%= linea[i].id %>"><%= linea[i].plazo[j].value %></option> 
+                  <% } %> 
+             
+              <% } %>              
             </select>
           </div>
 
           <div id="visible" class="oculto">
             <label for="monto">Monto:</label>
-            <input type="number" id="monto" />
+            <input
+              type="number"
+              id="monto"
+              pattern="/^\$[0-9]{1,3}([\\.][0-9]{3})"
+              required
+            />
           </div>
 
           <div class="oculto" id="plazo">
             <label for="plazo">Plazo (Meses):</label>
             <select id="plazo" name="plazo" required>
-              <% for (i = 1; i <=10; i++){%>
-              <option value="<%= i %>"><%= i%></option>
+              <% for (i = 0; i < linea.length; i++){%> 
+                <option value="<%= linea[i].id %>"><%= linea[i].value%></option>                          
               <% } %>
             </select>
           </div>
 
-          <div class="calculo">            
+          <div class="calculo">
             <h3>Tasa MV:</h3>
             <P>VALUE</P>
             <h3>Valor cuota aproximado:</h3>
