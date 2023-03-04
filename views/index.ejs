@@ -19,20 +19,6 @@
             </select>
           </div>
 
-          <div>
-            <label for="prueba">Lìnea de crédito:</label>
-            <select id="prueba" name="miprueba" ">                          
-              <% for (i = 0; i < linea.length; i++){%>
-                <%= console.log("PRIMER NIVEL == " + linea[i].plazo.length);%> 
-                 <%= console.log("formul == " );%> 
-                  <% for (j = 0; j < linea[i].plazo.length; j++){%>
-                    <option value="<%= linea[i].id %>"><%= linea[i].plazo[j].value %></option> 
-                  <% } %> 
-             
-              <% } %>              
-            </select>
-          </div>
-
           <div id="visible" class="oculto">
             <label for="monto">Monto:</label>
             <input
@@ -45,10 +31,7 @@
 
           <div class="oculto" id="plazo">
             <label for="plazo">Plazo (Meses):</label>
-            <select id="plazo" name="plazo" required>
-              <% for (i = 0; i < linea.length; i++){%> 
-                <option value="<%= linea[i].id %>"><%= linea[i].value%></option>                          
-              <% } %>
+            <select id="plazoS" name="plazoS" required>
             </select>
           </div>
 
